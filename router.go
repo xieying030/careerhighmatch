@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -8,4 +7,5 @@ import (
 
 func SetupRoutes() {
 	http.HandleFunc("/users", handlers.CreateUserHandler)
+	http.HandleFunc("/match", handlers.MatchHandler)
 }
