@@ -12,8 +12,10 @@ import (
 type User struct {
 	Name     string   `json:"name"`
 	Email    string   `json:"email"`
-	Skills   []string `json:"skills"`
+	Personality string   `json:"personality"`
+	Values      []string `json:"values"`
 	Interests []string `json:"interests"`
+	Skills   []string `json:"skills"`
 }
 
 // In-memory storage (temporary for prototype)
