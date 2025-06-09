@@ -10,6 +10,7 @@ type MatchRequest struct {
 	Personality string   `json:"personality"`
 	Values      []string `json:"values"`
 	Interests   []string `json:"interests"`
+	Skills      []string `json:"skills"`
 }
 
 type MatchResponse struct {
