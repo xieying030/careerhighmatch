@@ -1,4 +1,184 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - CareerHighMatch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 860px;
+      margin: auto;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #1f2937; }
+    h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 0.5rem; color: #1f2937; }
+    p { margin: 0.5rem 0; }
+    ul { margin-left: 1.5rem; padding-left: 1rem; }
+    li { margin-bottom: 0.5rem; }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button id="lang-button" onclick="switchLang()">🌐 Switch to 中文</button>
+    </div>
+
+    <!-- English content (default visible) -->
+    <div id="en">
+      <h1>🌟 About Us</h1>
+      <p><strong>We’re not building a product — we’re building a purpose.</strong></p>
+      <p>In a noisy and restless world, we choose to hold onto a simple but powerful belief:</p>
+      <p>Everyone who is willing to create value deserves a stage where their talent can truly shine.</p>
+      <p>We are not here to chase the capital curve, but to solve a real social problem: talent is wasted, opportunities are mismatched, and human connections are inefficient.</p>
+
+      <h2>🔭 Our Vision</h2>
+      <p>We aim to rebuild how people and opportunities are matched — creating a value-driven platform where talent and heart find their place.</p>
+      <ul>
+        <li>Enable precise matching between talent and opportunity.</li>
+        <li>Make it easier for meaningful work to find meaningful people.</li>
+      </ul>
+
+      <h2>🎯 Our Mission</h2>
+      <ul>
+        <li>Connect those who want to build, not just those who want a job.</li>
+        <li>Discover undervalued talents and offer them a platform to thrive.</li>
+        <li>Foster a trust- and value-based ecosystem, beyond resumes and labels.</li>
+      </ul>
+      <p>We use technology to connect people — but always put people at the center. We build systems of trust, not control.</p>
+
+      <h2>❤️ Our Core Values</h2>
+      <ul>
+        <li><strong>Value over Vanity:</strong> We measure by real value, not fame</li>
+        <li><strong>Long-Termism:</strong> We build with those who stay</li>
+        <li><strong>Trust First:</strong> Trust is the best fuel for collaboration</li>
+        <li><strong>Authentic Intentions:</strong> Pure motives are powerful</li>
+        <li><strong>No Talent Left Behind:</strong> No willing heart should be wasted</li>
+      </ul>
+
+      <h2>⚡ Action Manifesto</h2>
+      <ul>
+        <li>We seek value-aligned partners, not résumé-perfect people</li>
+        <li>We attract co-builders through actions, not incentives</li>
+        <li>We reject political overhead in favor of open, flat collaboration</li>
+        <li>We use tech to empower humans, not replace them</li>
+        <li>We believe the person matters more than the template</li>
+      </ul>
+
+      <h2>🌱 Join Us</h2>
+      <p>If you:</p>
+      <ul>
+        <li>Want to do something truly meaningful,</li>
+        <li>Refuse to be labeled or boxed in,</li>
+        <li>Are looking for a place to entrust your talent,</li>
+        <li>Seek idealism amid uncertainty,</li>
+      </ul>
+      <p>Then let’s talk. Whether you’re a developer, designer, researcher, or simply a trust system dreamer — we’re building something you may belong to.</p>
+
+      <h2>✉️ For Partners & Investors</h2>
+      <p>We’re not just building a tool — we’re laying the groundwork for future talent infrastructure. This is a rare moment where technology, culture, and market logic converge.</p>
+      <p>We welcome conversations about our roadmap and long-term vision. Join us — not as a bystander, but a catalyst.</p>
+    </div>
+
+    <!-- 中文内容 -->
+    <div id="zh" style="display: none;">
+      <h1>🌟 关于我们</h1>
+      <p><strong>我们不是在做一个产品，而是在构建一个有意义的目标。</strong></p>
+      <p>在一个喧嚣浮躁的世界里，我们选择坚持一种朴素但强大的信念：</p>
+      <p>每一个愿意创造价值的人，都值得拥有一个真正适合自己的舞台。</p>
+      <p>我们不是为追逐资本的增长曲线而来，而是为了解决一个真实的社会问题：人才被浪费，机会错位，人与人之间缺乏真实、有效的连接。</p>
+
+      <h2>🔭 愿景 Vision</h2>
+      <p>我们致力于重构“人 × 机会”的匹配机制，建立一个价值驱动的连接平台，让每一份才能与每一份心意，都不被辜负。</p>
+      <ul>
+        <li>让人才与机会精准匹配，推动资源在市场中的最优配置。</li>
+        <li>让想做事的人，不再孤单；让想成事的事，不再难人。</li>
+      </ul>
+
+      <h2>🎯 使命 Mission</h2>
+      <ul>
+        <li>连接真正愿意做事的人，而不是仅仅在找工作的人；</li>
+        <li>发现有潜力却被忽视的人才，给予他们发挥的平台；</li>
+        <li>共建一个基于信任与价值观的生态，而非简历与标签的筛选机制。</li>
+      </ul>
+      <p>我们用技术连接人，但始终以“人”为核心。我们不打造控制系统，我们打造信任系统。</p>
+
+      <h2>❤️ 核心价值观 Core Values</h2>
+      <ul>
+        <li><strong>价值优先：</strong>不追虚名，只以是否真正创造价值为标准</li>
+        <li><strong>长期主义：</strong>我们只与长期愿意共建的人合作</li>
+        <li><strong>信任为本：</strong>信任优于控制，是最强的协作引擎</li>
+        <li><strong>动机真实：</strong>我们相信动机纯粹的人力量更大</li>
+        <li><strong>不浪费人才：</strong>我们不浪费任何一个愿意投入的人</li>
+      </ul>
+
+      <h2>⚡ 行动宣言 Action Manifesto</h2>
+      <ul>
+        <li>我们寻找价值观契合的伙伴，而不是“背景完美”的人</li>
+        <li>我们用行动吸引同行者，而不是用条件吸引“打工人”</li>
+        <li>我们拒绝内耗式合作，选择开放、扁平、互信的协作方式</li>
+        <li>我们用技术放大人的价值，不是取代人</li>
+        <li>我们相信：真正重要的从来不是模板，而是人</li>
+      </ul>
+
+      <h2>🌱 加入我们 Join Us</h2>
+      <p>如果你：</p>
+      <ul>
+        <li>想做一些真正有意义的事，</li>
+        <li>不甘于被标签定义，</li>
+        <li>渴望一个可以托付才华的平台，</li>
+        <li>愿意在混乱的现实中寻找理想的秩序，</li>
+      </ul>
+      <p>欢迎你与我们联系。我们在寻找愿意一起共建未来的你，无论你是开发者、设计师、研究者，还是热爱构建信任系统的理想主义者。</p>
+
+      <h2>✉️ 合作与投资人</h2>
+      <p>我们不是在做一款工具，而是在打造一个通向未来人才基础设施的入口。这是一个融合技术、文化与市场机制的机会窗口。</p>
+      <p>我们欢迎和你深入探讨愿景与路径。请联系我们，成为推动者，而非旁观者。</p>
+    </div>
+  </div>
+
+  <script>
+    let current = 'en';
+    function switchLang() {
+      const zh = document.getElementById('zh');
+      const en = document.getElementById('en');
+      const btn = document.getElementById('lang-button');
+
+      if (current === 'en') {
+        en.style.display = 'none';
+        zh.style.display = 'block';
+        btn.innerText = '🌐 Switch to English';
+        current = 'zh';
+      } else {
+        zh.style.display = 'none';
+        en.style.display = 'block';
+        btn.innerText = '🌐 Switch to 中文';
+        current = 'en';
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
