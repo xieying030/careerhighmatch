@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CareerHighMatch.ai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -26,7 +27,7 @@
     p {
       max-width: 600px;
       font-size: 1.2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .cta-button, .partner-button {
       display: inline-block;
@@ -56,29 +57,59 @@
       color: #1b45b0;
     }
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 2rem;
       font-size: 0.85rem;
       color: #777;
     }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .lang-toggle button {
+      background-color: transparent;
+      border: none;
+      font-size: 0.9rem;
+      color: #2e63e7;
+      cursor: pointer;
+    }
+    .lang-toggle button:hover {
+      color: #1b45b0;
+      text-decoration: underline;
+    }
   </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <h1>Welcome to CareerHighMatch.ai</h1>
-  <p>
-    Where people find the right teams — and teams find the right people.
-  </p>
-  <p>
-  A values-driven AI platform connecting people and organizations through personality, interests, collaboration style, purpose, and culture.
-  </p>
 
-  <a href="moreinfo.html" class="cta-button">Learn More</a>
-  <a href="aboutus.html" class="cta-button">About Us</a>
-  
-  <a href="https://tally.so/r/wd4YxV" class="cta-button">Join Early Access List</a>
-  <a href="https://tally.so/r/wAOlly" class="partner-button">Partner With Us</a>
-  
+  <div class="lang-toggle">
+    <button onclick="switchLang()">🌐 Switch to 中文</button>
+  </div>
+
+  <!-- English content -->
+  <div id="en">
+    <h1>Welcome to CareerHighMatch.ai</h1>
+    <p>Where people find the right teams — and teams find the right people.</p>
+    <p>A values-driven AI platform connecting people and organizations through personality, interests, collaboration style, purpose, and culture.</p>
+
+    <a href="moreinfo.html" class="cta-button">Learn More</a>
+    <a href="aboutus.html" class="cta-button">About Us</a>
+    <a href="https://tally.so/r/wd4YxV" class="cta-button">Join Early Access List</a>
+    <a href="https://tally.so/r/wAOlly" class="partner-button">Partner With Us</a>
+  </div>
+
+  <!-- 中文内容 -->
+  <div id="zh" style="display: none;">
+    <h1>欢迎来到 CareerHighMatch.ai</h1>
+    <p>帮助人们找到最适合的团队，也让团队找到最适合的人才。</p>
+    <p>我们是一个价值观驱动的 AI 平台，连接人与组织，基于人格特质、兴趣、协作风格、使命感与文化契合度。</p>
+
+    <a href="moreinfo.html" class="cta-button">了解更多</a>
+    <a href="aboutus.html" class="cta-button">关于我们</a>
+    <a href="https://tally.so/r/wd4YxV" class="cta-button">加入抢先体验名单</a>
+    <a href="https://tally.so/r/wAOlly" class="partner-button">成为合作伙伴</a>
+  </div>
+
+  <!-- Social links (shared) -->
   <div class="social-icons">
     <a href="https://x.com/xieying1123" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
     <a href="https://www.linkedin.com/in/ying-xie-47710136/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -89,11 +120,31 @@
     <a href="https://www.youtube.com/@yingxie9974" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://medium.com/@xieying1123" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
   </div>
-  
 
   <footer>
     &copy; 2025 CareerHighMatch.ai — All rights reserved.
   </footer>
+
+  <script>
+    let currentLang = 'en';
+    function switchLang() {
+      const en = document.getElementById('en');
+      const zh = document.getElementById('zh');
+      const btn = document.querySelector('.lang-toggle button');
+
+      if (currentLang === 'en') {
+        en.style.display = 'none';
+        zh.style.display = 'block';
+        btn.innerText = '🌐 Switch to English';
+        currentLang = 'zh';
+      } else {
+        en.style.display = 'block';
+        zh.style.display = 'none';
+        btn.innerText = '🌐 Switch to 中文';
+        currentLang = 'en';
+      }
+    }
+  </script>
+
 </body>
 </html>
-
