@@ -15,6 +15,7 @@
       margin-left: auto;
       margin-right: auto;
       line-height: 1.7;
+      position: relative;
     }
     h1 {
       font-size: 2rem;
@@ -41,45 +42,122 @@
     .back-button:hover {
       background-color: #1b45b0;
     }
+    .lang-toggle {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+    .lang-toggle button {
+      background-color: transparent;
+      border: none;
+      font-size: 0.9rem;
+      color: #2e63e7;
+      cursor: pointer;
+    }
+    .lang-toggle button:hover {
+      color: #1b45b0;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-<h1>Find the Right People. Join the Right Teams.</h1>
 
-<p><strong>CareerHighMatch.ai</strong> is a values-driven AI platform that connects individuals and organizations through personality, interests, collaboration style, purpose, and culture.</p>
+<div class="lang-toggle">
+  <button onclick="switchLang()">🌐 Switch to 中文</button>
+</div>
 
-<h2>❓ The Problem</h2>
-<p>In today's job market, resumes and keywords dominate most hiring decisions — but they rarely capture what truly matters.</p>
-<p><em>What if the real question isn't just "what can you do?" but "where will you thrive?"</em></p>
-<p>Talented people struggle to find workplaces where they feel seen and valued. Likewise, teams struggle to find people who share their values and mission. It's time to fix both sides of the equation.</p>
+<!-- English Content -->
+<div id="en">
+  <h1>Find the Right People. Join the Right Teams.</h1>
+  <p><strong>CareerHighMatch.ai</strong> is a values-driven AI platform that connects individuals and organizations through personality, interests, collaboration style, purpose, and culture.</p>
 
-<h2>💡 Our Approach</h2>
-<p>We combine behavioral insights and data-driven profiling to deeply understand both individuals and teams. Our matching engine goes far beyond skill fit — it focuses on culture, compatibility, and long-term alignment.</p>
-<ul>
-  <li>🎭 Personality & Communication Style (via psychometric tools)</li>
-  <li>❤️ Core Values & Motivators (what truly drives you?)</li>
-  <li>🔍 Interest Graphs & Learning History (from behaviors and preferences)</li>
-  <li>👥 Team Culture & Role Archetypes (vector-based similarity matching)</li>
-</ul>
+  <h2>❓ The Problem</h2>
+  <p>In today's job market, resumes and keywords dominate most hiring decisions — but they rarely capture what truly matters.</p>
+  <p><em>What if the real question isn't just "what can you do?" but "where will you thrive?"</em></p>
+  <p>Talented people struggle to find workplaces where they feel seen and valued. Likewise, teams struggle to find people who share their values and mission. It's time to fix both sides of the equation.</p>
 
-<p>We help individuals discover teams that reflect who they are — and help teams find people who truly belong.</p>
+  <h2>💡 Our Approach</h2>
+  <p>We combine behavioral insights and data-driven profiling to deeply understand both individuals and teams. Our matching engine goes far beyond skill fit — it focuses on culture, compatibility, and long-term alignment.</p>
+  <ul>
+    <li>🎭 Personality & Communication Style (via psychometric tools)</li>
+    <li>❤️ Core Values & Motivators (what truly drives you?)</li>
+    <li>🔍 Interest Graphs & Learning History (from behaviors and preferences)</li>
+    <li>👥 Team Culture & Role Archetypes (vector-based similarity matching)</li>
+  </ul>
+  <p>We help individuals discover teams that reflect who they are — and help teams find people who truly belong.</p>
 
-<h2>🚀 Our Mission</h2>
-<ul>
-  <li>✅ Help people find purpose-driven, value-aligned career paths</li>
-  <li>✅ Help teams attract mission-aligned contributors and collaborators</li>
-  <li>✅ Build a smarter, more human-centric hiring ecosystem for the future of work</li>
-</ul>
+  <h2>🚀 Our Mission</h2>
+  <ul>
+    <li>✅ Help people find purpose-driven, value-aligned career paths</li>
+    <li>✅ Help teams attract mission-aligned contributors and collaborators</li>
+    <li>✅ Build a smarter, more human-centric hiring ecosystem for the future of work</li>
+  </ul>
 
-<h2>🛠️ Current Status</h2>
-<p>We're building our backend with Go and Kubernetes, and actively inviting early users, organizations, and technical collaborators to help shape this journey from day one.</p>
+  <h2>🛠️ Current Status</h2>
+  <p>We're building our backend with Go and Kubernetes, and actively inviting early users, organizations, and technical collaborators to help shape this journey from day one.</p>
 
-<h2>📩 Want to Join Us?</h2>
-<p>If you're curious, inspired, or want to build the future of career discovery with us — reach out. Whether you're a user, an HR innovator, a developer, or a potential partner, there's a place for you here.</p>
+  <h2>📩 Want to Join Us?</h2>
+  <p>If you're curious, inspired, or want to build the future of career discovery with us — reach out. Whether you're a user, an HR innovator, a developer, or a potential partner, there's a place for you here.</p>
+  <p style="font-weight: bold;">CareerHighMatch.ai — Where people and teams truly belong.</p>
+</div>
 
-<p style="font-weight: bold;">CareerHighMatch.ai — Where people and teams truly belong.</p>
+<!-- 中文内容 -->
+<div id="zh" style="display: none;">
+  <h1>找到对的人，加入对的团队。</h1>
+  <p><strong>CareerHighMatch.ai</strong> 是一个价值观驱动的 AI 平台，基于人格特质、兴趣、协作风格、使命感与文化契合度，连接人才与组织。</p>
 
+  <h2>❓ 我们要解决什么问题</h2>
+  <p>如今的招聘市场往往以简历与关键词为主导——但这些很难体现真正重要的东西。</p>
+  <p><em>问题也许不是“你会什么？”，而是“你在哪会闪光？”</em></p>
+  <p>有才华的人找不到真正欣赏他们的团队，而有愿景的团队也难以找到理念一致的伙伴。我们要同时解决这两个问题。</p>
 
-  <a href="index.html" class="back-button">← Back to Home</a>
+  <h2>💡 我们的做法</h2>
+  <p>我们结合行为洞察与数据建模，深入理解个人与团队的匹配特征。我们的匹配引擎超越了技能匹配，更注重文化、协作与长期一致性。</p>
+  <ul>
+    <li>🎭 人格与沟通风格（基于心理测评）</li>
+    <li>❤️ 核心价值与动机（真正驱动你的是？）</li>
+    <li>🔍 兴趣图谱与学习轨迹（从行为与偏好中挖掘）</li>
+    <li>👥 团队文化与角色原型（向量式相似度匹配）</li>
+  </ul>
+  <p>我们帮助人才找到最适合自己的团队，也帮助团队找到真正属于他们的成员。</p>
+
+  <h2>🚀 我们的使命</h2>
+  <ul>
+    <li>✅ 帮助个体找到有使命感、价值契合的职业路径</li>
+    <li>✅ 帮助团队吸引认同使命的贡献者与合作者</li>
+    <li>✅ 建立一个更智慧、更人本的未来招聘生态系统</li>
+  </ul>
+
+  <h2>🛠️ 当前状态</h2>
+  <p>我们正基于 Go 和 Kubernetes 构建后端，并邀请早期用户、组织和技术共建者参与，从第一天起共同塑造产品。</p>
+
+  <h2>📩 想加入我们？</h2>
+  <p>如果你好奇、被激励，或者想和我们一起重新定义职业发现——欢迎联系。无论你是用户、HR 创新者、开发者，还是潜在合作伙伴，我们在寻找你。</p>
+  <p style="font-weight: bold;">CareerHighMatch.ai — 让人和团队各得其所。</p>
+</div>
+
+<a href="index.html" class="back-button">← Back to Home</a>
+
+<script>
+  let currentLang = 'en';
+  function switchLang() {
+    const en = document.getElementById('en');
+    const zh = document.getElementById('zh');
+    const btn = document.querySelector('.lang-toggle button');
+
+    if (currentLang === 'en') {
+      en.style.display = 'none';
+      zh.style.display = 'block';
+      btn.innerText = '🌐 Switch to English';
+      currentLang = 'zh';
+    } else {
+      en.style.display = 'block';
+      zh.style.display = 'none';
+      btn.innerText = '🌐 Switch to 中文';
+      currentLang = 'en';
+    }
+  }
+</script>
+
 </body>
 </html>
