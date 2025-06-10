@@ -8,4 +8,6 @@ import (
 func SetupRoutes() {
 	http.HandleFunc("/users", handlers.CreateUserHandler)
 	http.HandleFunc("/match", handlers.MatchHandler)
+	http.HandleFunc("/aboutus", handlers.AboutHandler)
+
 }
